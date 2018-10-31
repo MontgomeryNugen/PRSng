@@ -3,7 +3,7 @@
     <span>User List</span>
     | <a routerLink = '/users/create'>Create New User</a>
   </div>
-  <table class="table table-sm">
+  <table class="table table-sm" *ngIf='users'>
     <thead>
       <tr>
         <td>Id</td>
@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let user of users'>
+      <tr *ngFor='let user of users | sortUsers'>
       <td>{{ user.id }}</td>
       <td>{{ user.firstName }} {{ user.lastName }}</td>
       <td>{{ user.userName }}</td>

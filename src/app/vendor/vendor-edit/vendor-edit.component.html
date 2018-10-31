@@ -33,15 +33,48 @@
         <input [(ngModel)]="vendor.address" class="form-control" type="text" name="address" #address="ngModel"
           required minlength="8">
       </div>
-      <div *ngIf="lastName.invalid && lastName.touched" class="col-form-label col-sm-2 text-danger">
-        <label *ngIf="lastName?.errors.required">Required</label>
+      <div *ngIf="address.invalid && address.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="address?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">City:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="vendor.city" class="form-control" type="text" name="city" #city="ngModel"
+          required minlength="8">
+      </div>
+      <div *ngIf="city.invalid && city.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="city?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">State:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="vendor.state" class="form-control" type="text" name="state" #state="ngModel"
+          required minlength="8">
+      </div>
+      <div *ngIf="state.invalid && state.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="state?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Zip:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="vendor.zip" class="form-control" type="text" name="zip" #zip="ngModel"
+          required minlength="8">
+      </div>
+      <div *ngIf="zip.invalid && zip.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="zip?.errors.required">Required</label>
       </div>
     </div>
 
     <div class="form-group row">
       <label class="col-form-label col-sm-2">Phone Number:</label>
       <div class="col-sm-8">
-        <input [(ngModel)]="user.phoneNumber" class="form-control" type="text" name="phoneNumber" #phoneNumber="ngModel"
+        <input [(ngModel)]="vendor.phoneNumber" class="form-control" type="text" name="phoneNumber" #phoneNumber="ngModel"
           required minlength="8">
       </div>
       <div *ngIf="phoneNumber.invalid && phoneNumber.touched" class="col-form-label col-sm-2 text-danger">
@@ -52,7 +85,7 @@
     <div class="form-group row">
       <label class="col-form-label col-sm-2">Email:</label>
       <div class="col-sm-8">
-        <input [(ngModel)]="user.email" class="form-control" type="text" name="email" #email="ngModel" required
+        <input [(ngModel)]="vendor.email" class="form-control" type="text" name="email" #email="ngModel" required
           minlength="8">
       </div>
       <div *ngIf="email.invalid && email.touched" class="col-form-label col-sm-2 text-danger">

@@ -9,6 +9,13 @@ import { Menu } from '../menu.class';
 })
 export class MenuComponent implements OnInit {
 
+  menus: Menu[] = [
+    new Menu("Home", "/home", "The Home Page"),
+    new Menu("Users", "/users/list", "The User List"),
+    new Menu("Vendors", "/vendors/list", "The Vendor List"),
+    new Menu("About", "/about", "The About Page"),
+  ];
+
   constructor() { }
 
   ngOnInit() {

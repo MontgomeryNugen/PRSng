@@ -12,6 +12,10 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { AboutComponent } from './about/about.component';
     UserEditComponent,
     MenuComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    VendorListComponent,
+    VendorDetailComponent,
+    VendorEditComponent,
+    VendorCreateComponent
   ],
   imports: [
     BrowserModule,

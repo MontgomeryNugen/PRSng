@@ -1,0 +1,75 @@
+<div class='component'>
+  <div>
+    <span class='page title'>Vendor Edit</span>
+  </div>
+
+  <div class='container form' *ngIf='vendor'>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Vendor Code:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="vendor.code" class="form-control" type="text" name="vendorcode" #vendorcode="ngModel"
+          required minlength="8">
+      </div>
+      <div *ngIf="vendorcode.invalid && vendorcode.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="vendorcode?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Vendor Name:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="vendor.name" class="form-control" type="text" name="vendorname" #vendorname="ngModel"
+          required minlength="8">
+      </div>
+      <div *ngIf="vendorname.invalid && vendorname.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="vendorname?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Address:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="vendor.address" class="form-control" type="text" name="address" #address="ngModel"
+          required minlength="8">
+      </div>
+      <div *ngIf="lastName.invalid && lastName.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="lastName?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Phone Number:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="user.phoneNumber" class="form-control" type="text" name="phoneNumber" #phoneNumber="ngModel"
+          required minlength="8">
+      </div>
+      <div *ngIf="phoneNumber.invalid && phoneNumber.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="phoneNumber?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Email:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="user.email" class="form-control" type="text" name="email" #email="ngModel" required
+          minlength="8">
+      </div>
+      <div *ngIf="email.invalid && email.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="email?.errors.required">Required</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Is Pre-Approved:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="vendor.preApproved" class="form-control" type="checkbox" name="preApproved" #preApproved="ngModel">
+      </div>
+    </div>
+
+    <div>
+      <button class = "btn btn-primary" (click) = "save()">Save</button>
+    </div>
+
+  </div>
+</div>

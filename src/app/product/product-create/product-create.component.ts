@@ -18,6 +18,7 @@ export class ProductCreateComponent implements OnInit {
   vendors: Vendor[];
 
   save(): void {
+    console.log("Product:", this.product);
     this.productsvc.add(this.product)
       .subscribe(resp => {
         console.log("resp:", resp);

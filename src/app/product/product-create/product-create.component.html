@@ -64,7 +64,7 @@
       <label class="col-form-label col-sm-2">Vendor:</label>
       <div class="col-sm-8">
         <select [(ngModel)]="product.vendor" class="form-control" name="zip">
-          <option *ngFor="let vendor of vendors" [ngValue]="vendor.id">{{ vendor.name }}</option>
+          <option *ngFor="let vendor of vendors" [ngValue]="vendor">{{ vendor.name }}</option>
         </select>
       </div>
     </div>

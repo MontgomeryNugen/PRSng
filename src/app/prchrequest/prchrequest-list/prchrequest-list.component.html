@@ -1,0 +1,32 @@
+<div class="component">
+  <div>
+    <span>Purchase Request List</span>
+    | <a routerLink='/prchrequests/create'>Create New</a>
+  </div>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Description</td>
+        <td>Status</td>
+        <td>Total</td>
+        <td>User</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let prchrequest of prchrequests'>
+        <td>{{ prchrequest.id }}</td>
+        <td>{{ prchrequest.description }}</td>
+        <td>{{ prchrequest.status }}</td>
+        <td>{{ prchrequest.total | currency }}</td>
+        <td>{{ prchrequest.user.lastName }}</td>
+        <td>
+          <a routerLink='/prchrequests/detail/{{prchrequest.Id}}'>Detail</a>
+          | <a routerLink='/prchrequests/edit/{{prchrequest.Id}}'>Edit</a>
+          | <a routerLink='/prchrequests/lines/{{prchrequest.Id}}'>Lines</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

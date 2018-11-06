@@ -6,6 +6,11 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 
+import { PrchrequestListComponent } from './prchrequest/prchrequest-list/prchrequest-list.component';
+import { PrchrequestDetailComponent } from './prchrequest/prchrequest-detail/prchrequest-detail.component';
+import { PrchrequestCreateComponent } from './prchrequest/prchrequest-create/prchrequest-create.component';
+import { PrchrequestEditComponent } from './prchrequest/prchrequest-edit/prchrequest-edit.component';
+
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
@@ -23,6 +28,11 @@ import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
+
+  { path: 'prchrequest/list', component: PrchrequestListComponent },
+  { path: 'prchrequest/create', component: PrchrequestCreateComponent },
+  { path: 'prchrequest/detail/:id', component: PrchrequestDetailComponent },
+  { path: 'prchrequest/edit/:id', component: PrchrequestEditComponent },
 
   { path: 'products/list', component: ProductListComponent },
   { path: 'products/create', component: ProductCreateComponent },

@@ -22,6 +22,13 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { PrchrequestCreateComponent } from './prchrequest/prchrequest-create/prchrequest-create.component';
+import { PrchrequestDetailComponent } from './prchrequest/prchrequest-detail/prchrequest-detail.component';
+import { PrchrequestEditComponent } from './prchrequest/prchrequest-edit/prchrequest-edit.component';
+import { PrchrequestListComponent } from './prchrequest/prchrequest-list/prchrequest-list.component';
+import { PrchrequestLinesComponent } from './prchrequest/prchrequest-lines/prchrequest-lines.component';
+import { PrchrequestReviewDetailComponent } from './prchrequest/prchrequest-review-detail/prchrequest-review-detail.component';
+import { PrchrequestReviewListComponent } from './prchrequest/prchrequest-review-list/prchrequest-review-list.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,14 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     ProductCreateComponent,
     ProductDetailComponent,
     ProductEditComponent,
-    ProductListComponent
+    ProductListComponent,
+    PrchrequestCreateComponent,
+    PrchrequestDetailComponent,
+    PrchrequestEditComponent,
+    PrchrequestListComponent,
+    PrchrequestLinesComponent,
+    PrchrequestReviewDetailComponent,
+    PrchrequestReviewListComponent
   ],
   imports: [
     BrowserModule,

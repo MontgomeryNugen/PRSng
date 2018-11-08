@@ -10,6 +10,7 @@ import { PrchrequestListComponent } from './prchrequest/prchrequest-list/prchreq
 import { PrchrequestDetailComponent } from './prchrequest/prchrequest-detail/prchrequest-detail.component';
 import { PrchrequestCreateComponent } from './prchrequest/prchrequest-create/prchrequest-create.component';
 import { PrchrequestEditComponent } from './prchrequest/prchrequest-edit/prchrequest-edit.component';
+import { PrchrequestLinesComponent } from './prchrequest/prchrequest-lines/prchrequest-lines.component';
 
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'prchrequest/create', component: PrchrequestCreateComponent },
   { path: 'prchrequest/detail/:id', component: PrchrequestDetailComponent },
   { path: 'prchrequest/edit/:id', component: PrchrequestEditComponent },
+  { path: 'prchrequest/lines/:id', component: PrchrequestLinesComponent },
 
   { path: 'products/list', component: ProductListComponent },
   { path: 'products/create', component: ProductCreateComponent },
@@ -58,4 +60,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

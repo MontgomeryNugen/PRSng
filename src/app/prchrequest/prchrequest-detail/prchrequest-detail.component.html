@@ -1,3 +1,33 @@
-<p>
-  prchrequest-detail works!
-</p>
+<div>
+  <div>
+    <span>Purchase Request Detail</span>
+  </div>
+  <p *ngIf='!prchrequest'>Retrieving data ... this may take a while...</p>
+  <table class="table table-sm form-smaller" *ngIf="prchrequest">
+    <tr><td>Id:</td><td>{{ prchrequest.id }}</td></tr>
+    <tr><td>Description:</td><td>{{ prchrequest.description }}</td></tr>
+    <tr><td>Justification:</td><td>{{ prchrequest.justification }}</td></tr>
+    <tr><td>Date Submitted:</td><td>{{ prchrequest.submittedDate }}</td></tr>
+    <tr><td>Date Needed:</td><td>{{ prchrequest.dateNeeded }}</td></tr>
+    <tr><td>Delivery Mode:</td><td>{{ prchrequest.deliveryMode }}</td></tr>
+    <tr><td>Status:</td><td>{{ prchrequest.status }}</td></tr>
+    <tr><td>Total:</td><td>{{ prchrequest.total }}</td></tr>
+    <tr><td>User:</td><td>{{ prchrequest.user.userName }}</td></tr>
+  </table>
+  <!-- <div>
+    <button class="btn" (click)="edit()">Edit</button>
+  </div>
+  <div>
+    <button class="btn btn-danger" (click)="delete()">Delete</button>
+  </div>
+  <div>
+    <button class="btn" (click)="review()">Review</button>
+  </div> -->
+  <div>
+    <span>
+      <button class="btn btn-success" (click)="review()">Review</button> |
+    </span>
+    <a class="btn btn-warning">Edit</a>
+    | <button class="btn btn-danger" (click)="delete()">Delete</button>
+  </div>
+</div>

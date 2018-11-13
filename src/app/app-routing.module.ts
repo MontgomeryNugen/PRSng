@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { LineItemListComponent } from './lineItem/lineitem-list/lineitem-list.component';
+import { LineItemDetailComponent } from './lineItem/lineitem-detail/lineitem-detail.component';
+import { LineItemEditComponent } from './lineItem/lineitem-edit/lineitem-edit.component';
+import { LineItemCreateComponent } from './lineItem/lineitem-create/lineitem-create.component';
+
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
@@ -30,6 +35,11 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 
+  { path: 'lineitems/list/:id', component: LineItemListComponent},
+  { path: 'lineitems/create/:id', component: LineItemCreateComponent},
+  { path: 'lineitems/detail/:id', component: LineItemDetailComponent},
+  { path: 'lineitems/edit/:id', component: LineItemEditComponent},
+  
   { path: 'prchrequest/list', component: PrchrequestListComponent },
   { path: 'prchrequest/create', component: PrchrequestCreateComponent },
   { path: 'prchrequest/detail/:id', component: PrchrequestDetailComponent },
@@ -45,6 +55,7 @@ const routes: Routes = [
   { path: 'users/create', component: UserCreateComponent },
   { path: 'users/detail/:id', component: UserDetailComponent },
   { path: 'users/edit/:id', component: UserEditComponent },
+  // { path: 'users/login', component: UserLoginComponent},
 
   { path: 'vendors/list', component: VendorListComponent },
   { path: 'vendors/create', component: VendorCreateComponent },

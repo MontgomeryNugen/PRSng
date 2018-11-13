@@ -1,0 +1,36 @@
+<div>
+  <div>
+  <span>Request Line Items</span>
+  | <a *ngIf="prchrequest" routerLink='/lineitems/create/{{ prchrequest.id }}'>Create New</a>
+  </div>
+  <div>
+    <h1>
+      <span>Request</span>
+    </h1>
+    <table class="table table-sm" *ngIf='prchrequest'>
+        <thead>
+          <tr><td>User</td><td>Description</td><td>Date Needed</td><td>Total</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>{{ prchrequest.user.firstName }} {{ prchrequest.user.lastName }}</td><td>{{ prchrequest.description }}</td><td>{{ prchrequest.dateNeeded | date }}</td><td>{{ prchrequest.total | currency }}</td></tr>
+        </tbody>
+    </table>
+    <h1>
+        <span>Line Items</span>
+    </h1>
+    <table class="table table-sm">
+      <thead>
+        <tr><td>Product</td><td>Quantity</td><td>Price</td><td>Action</td></tr>
+      </thead>
+      <tbody *ngIf='lineitems'>
+        <tr *ngFor='let lineitem of lineitems'>
+          <td>{{ lineitem.product.name }}</td><td>{{ lineitem.quantity }}</td><td>{{ lineitem.product.price }}</td>
+          <td>
+            <a routerLink='/lineitems/detail/{{ lineitem.id }}'>Detail</a>
+          | <a routerLink='/lineitems/edit/{{ lineitem.id }}'>Edit</a>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

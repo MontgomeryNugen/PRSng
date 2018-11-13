@@ -30,6 +30,10 @@ import { PrchrequestLinesComponent } from './prchrequest/prchrequest-lines/prchr
 import { PrchrequestReviewDetailComponent } from './prchrequest/prchrequest-review-detail/prchrequest-review-detail.component';
 import { PrchrequestReviewListComponent } from './prchrequest/prchrequest-review-list/prchrequest-review-list.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { LineitemCreateComponent } from './lineitem/lineitem-create/lineitem-create.component';
+import { LineitemDetailComponent } from './lineitem/lineitem-detail/lineitem-detail.component';
+import { LineitemEditComponent } from './lineitem/lineitem-edit/lineitem-edit.component';
+import { LineitemListComponent } from './lineitem/lineitem-list/lineitem-list.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +62,11 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     PrchrequestLinesComponent,
     PrchrequestReviewDetailComponent,
     PrchrequestReviewListComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    LineitemCreateComponent,
+    LineitemDetailComponent,
+    LineitemEditComponent,
+    LineitemListComponent
   ],
   imports: [
     BrowserModule,

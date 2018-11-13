@@ -32,5 +32,9 @@ export class UserService {
     return this.http.post(url + 'Remove', user) as Observable<JsonResponse>; 
   }
 
+  authenticate(user: User): Observable<JsonResponse> {
+    return this.http.post(url +'Login', user) as Observable<JsonResponse>
+  }
+
   constructor(private http: HttpClient) { }
 }
